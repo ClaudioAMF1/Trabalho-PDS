@@ -1,0 +1,152 @@
+/* styles.css */
+
+/* Fonte personalizada */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  padding-top: 56px; /* Altura da navbar */
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1f1f1f;
+}
+
+.navbar-brand {
+  font-weight: 500;
+}
+
+/* Tela de Login e Cadastro */
+.tela {
+  margin-top: 60px;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  background-color: #1f1f1f;
+}
+
+.card h2 {
+  color: #90caf9;
+}
+
+.form-label {
+  font-weight: 500;
+}
+
+.form-control {
+  background-color: #2c2c2c;
+  border: 1px solid #424242;
+  color: #e0e0e0;
+}
+
+.form-control:focus {
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+}
+
+.btn-primary {
+  background-color: #90caf9;
+  border-color: #90caf9;
+}
+
+.btn-primary:hover {
+  background-color: #64b5f6;
+  border-color: #64b5f6;
+}
+
+/* Links */
+a {
+  color: #90caf9;
+}
+
+a:hover {
+  color: #64b5f6;
+  text-decoration: none;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #1f1f1f;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+  min-height: calc(100vh - 56px);
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar .nav-link {
+  color: #e0e0e0;
+  font-weight: 500;
+}
+
+.sidebar .nav-link.active {
+  background-color: #2c2c2c;
+  color: #90caf9;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #2c2c2c;
+  color: #90caf9;
+}
+
+/* Ícones do Menu */
+.sidebar .nav-link .fas {
+  margin-right: 10px;
+}
+
+/* Conteúdo Principal */
+main {
+  margin-left: 0;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  main {
+    margin-left: 220px;
+  }
+}
+
+/* Overlay para dispositivos móveis */
+.overlay {
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+  position: fixed;
+  top: 56px; /* Altura da navbar */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 56px);
+  background-color: rgba(0,0,0,0.7);
+  z-index: 1020;
+}
+
+/* Responsividade do menu lateral */
+@media (max-width: 767.98px) {
+  .sidebar {
+    position: fixed;
+    top: 56px;
+    left: -220px;
+    width: 220px;
+    transition: all 0.3s;
+    z-index: 1030;
+  }
+
+  .sidebar.show {
+    left: 0;
+  }
+}
+
+/* Animações */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
