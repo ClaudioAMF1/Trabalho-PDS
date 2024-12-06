@@ -1,6 +1,5 @@
-## trabalho final de PDS
 
-
+Protótipo de site criado como parte do trabalho final de PDS
 ----
 
-Claudio e Lucas Fiche
+Autores: Claudio Meireles e Lucas Fiche
